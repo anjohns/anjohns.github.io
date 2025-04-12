@@ -3327,3 +3327,8 @@ input, select, textarea {
 			}
 
 		}
+
+/* Custom rule to center the last tile by pushing it into the second column */
+.placeholder-tile {
+  visibility: hidden;
+}
