@@ -2634,7 +2634,7 @@ input, select, textarea {
 					left: 0;
 					width: 100%;
 					height: 100%;
-					background-image: none;
+					background-image: none !important;
 					background-position: center;
 					background-repeat: no-repeat;
 					background-size: 100% 100%;
