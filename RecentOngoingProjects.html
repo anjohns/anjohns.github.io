@@ -52,23 +52,154 @@
 							<li><a href="DissertationFocus.html">Dissertation Focus</a></li>
 						</ul>
 					</nav>
+				
+<!-- Main -->
+<div id="main">
+    <div class="inner">
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<h1>Recent & Ongoing Projects</h1>
-							<p></p>
-							<h3>Human Movement in Cities</h3>
-							<p>This project explores how the built environment shapes the way pedestrians move through cities. How do urban features attract or repel people? How do we navigate around one another, and what patterns emerge when crowds form? I’m combining agent-based modeling, cellphone mobility data, and machine learning to understand how physical design influences collective behavior at the street level.</p>
-							
-							<h3>Adaptive Cities Group</h3>
-							<p>I’m part of a <a href="https://www.adaptivecities.org">team</a> developing digital twin models to help cities respond to extreme heat. Our goal is to create a near-real-time loop of data, modeling, and decision-making that can guide targeted cooling interventions—everything from tree planting to infrastructure redesign. The project is focused on protecting vulnerable urban populations from the health and social impacts of climate change. We are piloting this in Santiago, Chile, with seed funding from The Rockefeller Foundation’s partnership with Brookings (17 Rooms) and additional support from AutoDesk.</p>
-							
-							<h3>Zoning and Housing Restrictiveness</h3>
-							<p>Zoning ordinances vary dramatically from one municipality to the next, making it nearly impossible to assemble large-scale datasets on how land is actually zoned. <a href="https://gislab.wharton.upenn.edu/about/">This project</a> aimed to overcome that barrier through modeling and inference. I led a machine learning effort that used features of the built environment to predict the maximum housing density allowed under local zoning codes. By training stacked ensemble models, we were able to estimate zoning restrictiveness at scale—offering a new way to understand and map the regulatory landscape that shapes development.</p>
-							
-							</div>
-					</div>
+        <h1>Recent &amp; Ongoing Projects</h1>
+
+        <h3>Human Movement in Cities</h3>
+
+        <p>
+            This project explores how the built environment shapes the way
+            people move through cities. How do urban features attract or
+            repel people? What determines the routes we take, and where
+            people tend to gather? My research combines machine learning
+            with large-scale mobility data to understand these patterns
+            at the street level. I also use agent-based simulations to
+            explore how individual navigation decisions produce larger
+            patterns of movement.
+        </p>
+
+        <p>
+            Our first large-scale analysis focused on New York City.
+            We assembled data covering 133,756 street segments and
+            analyzed 12.6 million anonymized mobile-device stop events
+            recorded over three months in 2023. Each segment was
+            described using characteristics of the street network,
+            surrounding land use, and nearby points of interest.
+            We then trained machine learning models to predict local
+            stop activity during different times of the day and week.
+        </p>
+
+        <p>
+            The results were encouraging. Our best models reduced
+            prediction error by roughly 38–50% compared with a simple
+            baseline, and the most informative features changed
+            throughout the day. Street length and the number of nearby
+            points of interest were consistently important, while
+            transportation-related locations were more informative
+            earlier in the day. Retail and other nonresidential
+            features became more important during afternoons and
+            weekends. This work was presented at
+            <a href="https://sbp-brims.org/2026/acceptedpapers/">
+            SBP-BRiMS 2026</a> in our paper,
+            <em>Built-Environment Predictors of Street-Segment
+            Pedestrian Activity in New York City</em>.
+            My publications are also available through
+            <a href="https://scholar.google.com/citations?user=pY4ZrFYAAAAJ&amp;hl=en">
+            Google Scholar</a>.
+        </p>
+
+        <p>
+            We are now expanding this analysis to New Orleans,
+            where we have assembled data for approximately 28,000
+            street segments. New Orleans presents a different urban
+            environment and considerably sparser mobility observations.
+            We are interested in whether the patterns identified in
+            New York hold elsewhere, and whether models developed in
+            data-rich cities can help us understand activity in
+            places with less available data. We also plan to extend
+            the work to additional international cities.
+        </p>
+
+
+        <h3>Language Models and AI Applications</h3>
+
+        <p>
+            Outside my formal research, I've been building applications
+            using large language models (LLMs), with a particular
+            interest in running them locally. One ongoing project,
+            LiteraryRAG, is a Python-based system for evaluating
+            fiction using examples drawn from published literary
+            magazines. I built a corpus by scraping and cleaning
+            published work from journals including XRAY and Wigleaf,
+            then developed a two-stage retrieval system. The first
+            stage uses semantic vector search to identify potentially
+            relevant stories, while a second reranking model selects
+            the strongest matches. The retrieved examples provide
+            context for a locally hosted LLM. I've integrated the
+            system into LM Studio so that the entire workflow can
+            be used directly through its chat interface.
+        </p>
+
+        <p>
+            I've also spent time learning how large language models
+            work under the hood, especially the architectural choices
+            that make local inference possible. Recently, I configured
+            a 75.8 GB Qwen3.8-Flash-Next model to run on my desktop,
+            which has 64 GB of RAM and 12 GB of VRAM. This is possible
+            in part because the model uses an SSD-backed, memory-mapped
+            n-gram table rather than keeping its entire footprint in
+            working memory. I use Strata, an inference engine suited
+            to this architecture. It's been an interesting exercise
+            in understanding how model design and hardware constraints
+            interact.
+        </p>
+
+        <p>
+            Another project is a Presidential Action Manager written
+            in Python. It retrieves executive orders and other
+            presidential actions from the White House website,
+            extracts their text, and uses the OpenAI API to generate
+            concise, structured summaries. The program then
+            automatically emails the results. It's a relatively
+            simple application, but a useful example of connecting
+            web scraping, language models, and automation to solve
+            a practical problem.
+        </p>
+
+
+        <h3>Adaptive Cities Group</h3>
+
+        <p>
+            I’m part of a
+            <a href="https://www.adaptivecities.org">team</a>
+            developing digital twin models to help cities respond
+            to extreme heat. Our goal is to create a near-real-time
+            loop of data, modeling, and decision-making that can
+            guide targeted cooling interventions, everything from
+            tree planting to infrastructure redesign. The project
+            is focused on protecting vulnerable urban populations
+            from the health and social impacts of climate change.
+            We are piloting this in Santiago, Chile, with seed
+            funding from The Rockefeller Foundation’s partnership
+            with Brookings (17 Rooms) and additional support from
+            Autodesk.
+        </p>
+
+
+        <h3>Zoning and Housing Restrictiveness</h3>
+
+        <p>
+            Zoning ordinances vary dramatically from one municipality
+            to the next, making it nearly impossible to assemble
+            large-scale datasets on how land is actually zoned.
+            <a href="https://gislab.wharton.upenn.edu/about/">
+            This project</a> aimed to overcome that barrier through
+            modeling and inference. I led a machine learning effort
+            that used features of the built environment to predict
+            the maximum housing density allowed under local zoning
+            codes. By training stacked ensemble models, we were
+            able to estimate zoning restrictiveness at scale,
+            offering a new way to understand and map the regulatory
+            landscape that shapes development.
+        </p>
+
+    </div>
+</div>
+
 
 				<!-- Footer -->
 					<footer id="footer">
